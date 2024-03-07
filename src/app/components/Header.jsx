@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import logo from "/public/assets/shared/desktop/logo.svg";
 import HamburgerButton from "./UI/HamburgerButton";
+import MobileMenu from "./modals/MobileMenu";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,7 +23,10 @@ export default function Header() {
         height="18"
         className="h-[1.8rem] w-[16.3rem]"
       />
-      <HamburgerButton menuOpen={menuOpen} setMenuOpen={handleMenuOpen} />
+      <div className="relative z-20">
+        <HamburgerButton menuOpen={menuOpen} setMenuOpen={handleMenuOpen} />
+      </div>
+      {menuOpen && <MobileMenu />}
     </header>
   );
 }
