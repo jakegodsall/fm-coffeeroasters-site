@@ -2,6 +2,7 @@ import Image from "next/image";
 import Hero from "./components/Hero";
 import CollectionSection from "./components/CollectionSection/CollecitonSection";
 import WhyChooseUsSection from "./components/WhyChooseUsSection/WhyChooseUsSection";
+import HowItWorksSection from "./components/HowItWorksSection/HowItWorksSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
       </div>
       <div className="mb-[12rem] w-[90%]">
         <WhyChooseUsSection />
+      </div>
+      <div className="mb-[12rem] w-[90%]">
+        <HowItWorksSection />
       </div>
     </main>
   );
