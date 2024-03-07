@@ -1,8 +1,18 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import logo from "/public/assets/shared/desktop/logo.svg";
 import HamburgerButton from "./UI/HamburgerButton";
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function handleMenuOpen() {
+    console.log("clicked");
+    setMenuOpen((prevState) => !prevState);
+  }
+
   return (
     <header className="flex items-center justify-between px-[2.4rem] pb-[4rem] pt-[3.2rem]">
       <Image
@@ -12,7 +22,7 @@ export default function Header() {
         height="18"
         className="h-[1.8rem] w-[16.3rem]"
       />
-      <HamburgerButton />
+      <HamburgerButton menuOpen={menuOpen} setMenuOpen={handleMenuOpen} />
     </header>
   );
 }
