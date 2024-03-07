@@ -1,5 +1,6 @@
 import { Fraunces, Barlow } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${fraunces.variable} ${barlow.variable}`}>
+        <Header />
         {children}
       </body>
     </html>
