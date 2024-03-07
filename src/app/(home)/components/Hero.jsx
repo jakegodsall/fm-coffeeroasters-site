@@ -4,7 +4,7 @@ import Button from "@/app/components/UI/Button";
 
 export default function Hero() {
   return (
-    <section className="absolute w-[90%] overflow-hidden rounded-[1rem]">
+    <section className="relative w-full overflow-hidden rounded-[1rem]">
       <div className=" flex flex-col items-center px-[2.4rem] py-[10rem] text-center text-white">
         <Image src={heroBackground} alt="coffeepress" fill className="-z-10" />
         <h1 className="mb-[2.4rem] font-fraunces text-[4rem] font-black leading-[4rem]">
