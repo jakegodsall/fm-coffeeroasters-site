@@ -4,13 +4,13 @@ import HamburgerButton from "./UI/HamburgerButton";
 
 export default function Header() {
   return (
-    <header className="px-[2.4rem] pt-[3.2rem] flex justify-between items-center">
+    <header className="flex items-center justify-between px-[2.4rem] pb-[4rem] pt-[3.2rem]">
       <Image
         src={logo}
         alt="logo"
         width="163"
         height="18"
-        className="w-[16.3rem] h-[1.8rem]"
+        className="h-[1.8rem] w-[16.3rem]"
       />
       <HamburgerButton />
     </header>
