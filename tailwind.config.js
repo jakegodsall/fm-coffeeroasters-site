@@ -11,6 +11,13 @@ module.exports = {
         fraunces: "var(--font-fraunces)",
         barlow: "var(--font-barlow)",
       },
+      colors: {
+        "primary-green": "var(--primary-green)",
+        "secondary-green": "var(--secondary-green)",
+        "primary-beige": "var(--primary-beige)",
+        "off-white": "var(--off-white)",
+        grey: "var(--grey)",
+      },
     },
   },
   plugins: [],
