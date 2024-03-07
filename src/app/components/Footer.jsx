@@ -1,8 +1,9 @@
 import Link from "next/link";
+import SocialsBar from "./SocialsBar";
 
 export default function Footer() {
   return (
-    <footer className="mx-[2.4rem] flex flex-col items-center bg-secondary-green py-[5.4rem]">
+    <footer className="mx-[2.4rem] mb-[7.2rem] flex flex-col items-center bg-secondary-green py-[5.4rem]">
       <svg
         className="mb-[4.8rem] h-[2.7rem] w-[23.7rem]"
         width="237"
@@ -20,7 +21,7 @@ export default function Footer() {
           />
         </g>
       </svg>
-      <nav>
+      <nav className="mb-[4.8rem]">
         <ul className="flex flex-col items-center gap-[2.4rem] text-center font-barlow text-[1.2rem] uppercase text-grey">
           <li>
             <Link href="#">Home</Link>
@@ -33,6 +34,7 @@ export default function Footer() {
           </li>
         </ul>
       </nav>
+      <SocialsBar />
     </footer>
   );
 }
