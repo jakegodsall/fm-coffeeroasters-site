@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'white-to-transparent': "linear-gradient(white, transparent)",
+      },
       fontFamily: {
         fraunces: "var(--font-fraunces)",
         barlow: "var(--font-barlow)",
