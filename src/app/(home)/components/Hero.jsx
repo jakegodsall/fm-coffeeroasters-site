@@ -6,7 +6,7 @@ import Button from "@/app/components/UI/Button";
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden rounded-[1rem] sm:max-w-[68rem]">
+    <section className="relative w-full overflow-hidden rounded-[1rem]">
       <div className="flex flex-col items-center px-[2rem] py-[10rem] text-center text-white sm:items-start">
         <Image
           src={heroBackgroundMobile}

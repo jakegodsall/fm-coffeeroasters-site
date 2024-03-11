@@ -22,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${fraunces.variable} ${barlow.variable}`}>
+      <body className={`${fraunces.variable} ${barlow.variable} flex flex-col`}>
         <Header />
         {children}
         <Footer />
