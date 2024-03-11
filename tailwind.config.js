@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'white-to-transparent': "linear-gradient(white, transparent)",
+        "white-to-transparent":
+          "linear-gradient(to bottom, white, white 60%, rgba(255, 255, 255, 0));",
       },
       fontFamily: {
         fraunces: "var(--font-fraunces)",
