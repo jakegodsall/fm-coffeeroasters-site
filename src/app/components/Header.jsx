@@ -34,7 +34,7 @@ export default function Header() {
               className="text-[1.2rem] font-semibold uppercase text-grey"
               href="/"
             >
-              Home
+              home
             </Link>
           </li>
           <li>
@@ -42,7 +42,7 @@ export default function Header() {
               className="text-[1.2rem] font-semibold uppercase text-grey"
               href="/about"
             >
-              About Us
+              about us
             </Link>
           </li>
           <li>
@@ -50,7 +50,7 @@ export default function Header() {
               className="text-[1.2rem] font-semibold uppercase text-grey"
               href="/subscribe"
             >
-              Subscribe
+              create your plan
             </Link>
           </li>
         </ul>
