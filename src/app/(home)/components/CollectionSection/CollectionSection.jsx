@@ -39,7 +39,9 @@ const COFFEE_DATA = [
 export default function CollectionSection() {
   return (
     <section className="flex flex-col items-center">
-      <h2 className="mb-[1.5rem] font-fraunces text-[4rem]">our collection</h2>
+      <h2 className="bg-text-linear-gradient mb-[2rem] bg-clip-text text-center font-fraunces text-[3.5rem] text-transparent">
+        our collection
+      </h2>
       <ul className="flex flex-col gap-[4.8rem]">
         {COFFEE_DATA.map((coffeeItem) => {
           return (

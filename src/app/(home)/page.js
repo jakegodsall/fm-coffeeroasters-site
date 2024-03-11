@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Hero from "./components/Hero";
-import CollectionSection from "./components/CollectionSection/CollecitonSection";
+import CollectionSection from "./components/CollectionSection/CollectionSection";
 import WhyChooseUsSection from "./components/WhyChooseUsSection/WhyChooseUsSection";
 import HowItWorksSection from "./components/HowItWorksSection/HowItWorksSection";
 

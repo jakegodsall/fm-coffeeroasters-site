@@ -10,6 +10,8 @@ module.exports = {
       backgroundImage: {
         "white-to-transparent":
           "linear-gradient(to bottom, white, white 60%, rgba(255, 255, 255, 0));",
+        "text-linear-gradient":
+          "linear-gradient(180deg, rgba(0, 0, 0, 40%) 0%, #FEFCF7 100%)",
       },
       fontFamily: {
         fraunces: "var(--font-fraunces)",

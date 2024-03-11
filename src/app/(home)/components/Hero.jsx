@@ -5,9 +5,9 @@ import Button from "@/app/components/UI/Button";
 export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden rounded-[1rem]">
-      <div className=" flex flex-col items-center px-[2.4rem] py-[10rem] text-center text-white">
+      <div className=" flex flex-col items-center px-[2rem] py-[10rem] text-center text-white">
         <Image src={heroBackground} alt="coffeepress" fill className="-z-10" />
-        <h1 className="mb-[2.4rem] font-fraunces text-[4rem] font-black leading-[4rem]">
+        <h1 className="mb-[2.4rem] font-fraunces text-[3.8rem] font-black leading-[4rem]">
           Great coffee made simple
         </h1>
         <p className="mb-[4rem] text-[1.5rem] font-normal leading-[2.5rem] text-off-white opacity-[0.8]">
