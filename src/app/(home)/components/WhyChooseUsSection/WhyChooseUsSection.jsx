@@ -73,7 +73,7 @@ export default function WhyChooseUsSection() {
           growers to give you a more impactful experience on every level.
         </p>
       </div>
-      <ul className="relative flex flex-col items-center gap-[2.4rem] px-[2.4rem] pt-[3.6rem] before:absolute before:top-0 before:-z-10 before:h-[60rem] before:w-full before:rounded-b-[1rem] before:bg-[#222830]">
+      <ul className="relative flex flex-col items-center gap-[2.4rem] px-[2.4rem] pt-[3.6rem] before:absolute before:top-0 before:-z-10 before:h-[60rem] before:w-full before:rounded-b-[1rem] before:bg-[#222830] sm:before:h-[45rem]">
         {REASONS_DATA.map((reason) => (
           <li key={reason.id}>
             <WhyChooseUsItem
