@@ -17,13 +17,15 @@ export default function Header() {
 
   return (
     <header className="mx-auto flex w-full items-center justify-between px-[2.4rem] pb-[4rem] pt-[3.2rem] sm:max-w-[68rem] sm:px-0">
-      <Image
-        src={logo}
-        alt="logo"
-        width="163"
-        height="18"
-        className="h-[1.8rem] w-[16.3rem]"
-      />
+      <Link href="/">
+        <Image
+          src={logo}
+          alt="logo"
+          width="163"
+          height="18"
+          className="h-[1.8rem] w-[16.3rem]"
+        />
+      </Link>
       <div className="relative z-20 sm:hidden">
         <HamburgerButton menuOpen={menuOpen} setMenuOpen={handleMenuOpen} />
       </div>
@@ -31,7 +33,7 @@ export default function Header() {
         <ul className="flex gap-[3.3rem]">
           <li>
             <Link
-              className="text-[1.2rem] font-semibold uppercase text-grey"
+              className="text-[1.2rem] font-semibold uppercase text-grey hover:text-black"
               href="/"
             >
               home
@@ -39,7 +41,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              className="text-[1.2rem] font-semibold uppercase text-grey"
+              className="text-[1.2rem] font-semibold uppercase text-grey hover:text-black"
               href="/about"
             >
               about us
@@ -47,7 +49,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              className="text-[1.2rem] font-semibold uppercase text-grey"
+              className="text-[1.2rem] font-semibold uppercase text-grey hover:text-black"
               href="/subscribe"
             >
               create your plan
