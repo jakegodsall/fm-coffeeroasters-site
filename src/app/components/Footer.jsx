@@ -21,8 +21,8 @@ export default function Footer() {
           />
         </g>
       </svg>
-      <nav className="mb-[4.8rem]">
-        <ul className="flex flex-col items-center gap-[2.4rem] text-center font-barlow text-[1.2rem] uppercase text-grey">
+      <nav className="mb-[4.8rem] sm:mb-[6.8rem]">
+        <ul className="flex flex-col items-center gap-[2.4rem] text-center font-barlow text-[1.2rem] uppercase text-grey sm:flex-row">
           <li>
             <Link href="#">Home</Link>
           </li>
