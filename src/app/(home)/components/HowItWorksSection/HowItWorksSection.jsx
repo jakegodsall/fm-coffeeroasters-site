@@ -1,5 +1,6 @@
 import Button from "@/app/components/UI/Button";
 import HowItWorksItem from "./HowItWorksItem";
+import HowItWorksGraphic from "./HowItWorksGraphic";
 
 const HOW_DATA = [
   {
@@ -24,11 +25,14 @@ const HOW_DATA = [
 
 export default function HowItWorksSection() {
   return (
-    <section className="flex flex-col items-center">
+    <section className="flex flex-col items-center sm:items-start">
       <h2 className="mb-[8rem] font-fraunces text-[2.4rem] text-grey">
         How it works
       </h2>
-      <ul className="mb-[7.9rem] flex flex-col items-center gap-[5.6rem]">
+      <div className="hidden sm:mb-[4.8rem] sm:block">
+        <HowItWorksGraphic />
+      </div>
+      <ul className="mb-[7.9rem] flex flex-col items-center gap-[5.6rem] sm:flex-row sm:items-start sm:gap-[3rem]">
         {HOW_DATA.map((how) => (
           <li key={how.id}>
             <HowItWorksItem

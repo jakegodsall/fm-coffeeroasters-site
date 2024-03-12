@@ -1,6 +1,6 @@
 export default function HowItWorksItem({ id, title, description }) {
   return (
-    <div className="flex flex-col items-center text-center">
+    <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
       <p className="mb-[2.4rem] font-fraunces text-[7.2rem] text-primary-beige">
         0{id}
       </p>
