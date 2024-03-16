@@ -12,6 +12,10 @@ module.exports = {
           "linear-gradient(to bottom, white, white 60%, rgba(255, 255, 255, 0));",
         "text-linear-gradient":
           "linear-gradient(180deg, rgba(0, 0, 0, 40%) 0%, #FEFCF7 100%)",
+        "home-hero-mobile":
+          "url(/assets/home/mobile/image-hero-coffeepress.jpg)",
+        "home-hero-desktop":
+          "url(/assets/home/desktop/image-hero-coffeepress.jpg)",
         "about-hero-mobile":
           "url(/assets/about/mobile/image-hero-whitecup.jpg)",
         "about-hero-desktop":
