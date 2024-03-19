@@ -1,5 +1,6 @@
 import CommitmentSection from "./components/CommitmentSection";
 import Hero from "./components/Hero";
+import HqSection from "./components/HqSection/HqSection";
 import QualitySection from "./components/QualitySection";
 
 export default function AboutPage() {
@@ -13,6 +14,9 @@ export default function AboutPage() {
       </div>
       <div className="mb-[15rem]">
         <QualitySection />
+      </div>
+      <div>
+        <HqSection />
       </div>
     </main>
   );
