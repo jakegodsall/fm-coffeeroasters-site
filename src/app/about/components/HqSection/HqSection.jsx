@@ -40,7 +40,7 @@ const HQ_DATA = [
       zip: "SY6 1YA",
     },
     phone: "+44 1241 918425",
-    icon: australiaIcon,
+    icon: unitedKingdomIcon,
   },
   {
     id: 2,
@@ -72,9 +72,11 @@ const HQ_DATA = [
 
 export default function HqSection() {
   return (
-    <section>
-      <h2>Our headquarters</h2>
-      <ul>
+    <section className="flex flex-col items-center">
+      <h2 className="mb-[7.2rem]  font-fraunces text-[2.4rem] text-grey">
+        Our headquarters
+      </h2>
+      <ul className="flex flex-col items-center gap-[8rem]">
         {HQ_DATA.map((hq) => (
           <li key={hq.id}>
             <HqItem

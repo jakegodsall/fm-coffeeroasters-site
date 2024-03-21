@@ -1,12 +1,21 @@
 export default function HqItem({ title, address, phone, icon }) {
   return (
-    <div>
-      {icon}
-      <h3>{title}</h3>
+    <div className="flex flex-col items-center">
+      <div className="mb-[4.8rem]">{icon}</div>
+      <h3 className="mb-[2.2rem] font-fraunces text-[2.8rem] text-secondary-green">
+        {title}
+      </h3>
       {Object.values(address).map((line, idx) => (
-        <p key={idx}>{line}</p>
+        <p
+          className="mb-[0.3rem] font-barlow text-[1.6rem] text-secondary-green"
+          key={idx}
+        >
+          {line}
+        </p>
       ))}
-      <p>{phone}</p>
+      <p className="mt-[0.3rem] font-barlow text-[1.6rem] text-secondary-green">
+        {phone}
+      </p>
     </div>
   );
 }

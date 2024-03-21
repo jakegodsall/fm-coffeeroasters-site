@@ -15,7 +15,7 @@ export default function AboutPage() {
       <div className="mb-[15rem]">
         <QualitySection />
       </div>
-      <div>
+      <div className="mb-[12rem]">
         <HqSection />
       </div>
     </main>
