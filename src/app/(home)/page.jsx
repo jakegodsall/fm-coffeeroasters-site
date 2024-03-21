@@ -10,7 +10,7 @@ export default function Home() {
       <div className="mb-[12rem] flex w-[90%] flex-col items-center sm:max-w-[68rem] md:max-w-[128rem]">
         <Hero />
       </div>
-      <div className="mb-[12rem] w-[90%]">
+      <div className="mb-[12rem] w-[90%] sm:max-w-[68rem] md:max-w-[128rem] lg:mb-[9rem]">
         <CollectionSection />
       </div>
       <div className="mb-[12rem] flex w-[90%] flex-col items-center sm:max-w-[68rem] md:max-w-[128rem]">

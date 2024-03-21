@@ -62,18 +62,18 @@ const REASONS_DATA = [
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="overflow-hidden rounded-[1rem]">
-      <div className="flex flex-col items-center bg-[#2C343E] px-[2.4rem] pt-[6.4rem] text-center text-white">
-        <h2 className="mb-[2.4rem] font-fraunces text-[2.8rem]">
+    <section className="w-full overflow-hidden rounded-[1rem]">
+      <div className="flex flex-col items-center bg-[#2C343E] px-[2.4rem] pt-[6.4rem] text-center text-white lg:pb-[6.4rem]">
+        <h2 className="mb-[2.4rem] max-w-[54rem] font-fraunces text-[2.8rem]">
           Why choose us?
         </h2>
-        <p className="text-offset-white pb-[2.4rem] text-[1.5rem] leading-[2.5rem] opacity-[0.6]">
+        <p className="text-offset-white max-w-[54rem] pb-[2.4rem] text-[1.5rem] leading-[2.5rem] opacity-[0.6] md:pb-0">
           A large part of our role is choosing which particular coffees will be
           featured in our range. This means working closely with the best coffee
           growers to give you a more impactful experience on every level.
         </p>
       </div>
-      <ul className="relative flex flex-col items-center gap-[2.4rem] px-[2.4rem] pt-[3.6rem] before:absolute before:top-0 before:-z-10 before:h-[60rem] before:w-full before:rounded-b-[1rem] before:bg-[#222830] sm:before:h-[45rem]">
+      <ul className="relative flex flex-col items-center gap-[2.4rem] px-[2.4rem] pt-[3.6rem] before:absolute before:left-0 before:top-0 before:-z-10 before:h-[60rem] before:w-full before:rounded-b-[1rem] before:bg-[#222830] sm:before:h-[45rem] md:before:h-[25rem] lg:flex-row lg:items-stretch lg:justify-center lg:gap-[3rem]">
         {REASONS_DATA.map((reason) => (
           <li key={reason.id}>
             <WhyChooseUsItem

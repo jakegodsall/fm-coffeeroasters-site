@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CollectionItem({ name, description, image }) {
   return (
-    <div className="flex w-full flex-col items-center text-center sm:flex-row">
+    <div className="flex w-full flex-col items-center text-center sm:flex-row md:flex-col">
       <Image
         src={image}
         alt={name}

@@ -10,7 +10,7 @@ import MobileMenu from "./modals/MobileMenu";
 import Link from "next/link";
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
+const [menuOpen, setMenuOpen] = useState(false);
 
   function handleMenuOpen() {
     setMenuOpen((prevState) => !prevState);
