@@ -3,7 +3,7 @@ import SocialsBar from "./SocialsBar";
 
 export default function Footer() {
   return (
-    <footer className="mx-[2.4rem] mb-[7.2rem] flex w-full max-w-[120rem] flex-col items-center bg-secondary-green py-[5.4rem] lg:mx-auto lg:flex-row lg:px-[8.5rem]">
+    <footer className="mx-auto mb-[7.2rem] flex w-[90%] max-w-[120rem] flex-col items-center bg-secondary-green py-[5.4rem] lg:w-full lg:flex-row lg:px-[8.5rem]">
       <svg
         className="mb-[4.8rem] h-[2.7rem] w-[23.7rem] lg:mb-0 lg:mr-[10rem]"
         width="237"
