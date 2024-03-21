@@ -29,10 +29,10 @@ export default function HowItWorksSection() {
       <h2 className="mb-[8rem] font-fraunces text-[2.4rem] text-grey">
         How it works
       </h2>
-      <div className="hidden sm:mb-[4.8rem] sm:block">
+      <div className="hidden w-full sm:mb-[4.8rem] sm:block">
         <HowItWorksGraphic />
       </div>
-      <ul className="mb-[7.9rem] flex flex-col items-center gap-[5.6rem] sm:flex-row sm:items-start sm:gap-[3rem]">
+      <ul className="mb-[7.9rem] flex flex-col items-center gap-[5.6rem] sm:grid sm:max-w-[120rem] sm:grid-cols-3 sm:items-start sm:gap-[3rem]">
         {HOW_DATA.map((how) => (
           <li key={how.id}>
             <HowItWorksItem
