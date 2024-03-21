@@ -3,9 +3,9 @@ import SocialsBar from "./SocialsBar";
 
 export default function Footer() {
   return (
-    <footer className="mx-[2.4rem] mb-[7.2rem] flex flex-col items-center bg-secondary-green py-[5.4rem]">
+    <footer className="mx-[2.4rem] mb-[7.2rem] flex w-full max-w-[120rem] flex-col items-center bg-secondary-green py-[5.4rem] lg:mx-auto lg:flex-row lg:px-[8.5rem]">
       <svg
-        className="mb-[4.8rem] h-[2.7rem] w-[23.7rem]"
+        className="mb-[4.8rem] h-[2.7rem] w-[23.7rem] lg:mb-0 lg:mr-[10rem]"
         width="237"
         height="27"
         xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@ export default function Footer() {
           />
         </g>
       </svg>
-      <nav className="mb-[4.8rem] sm:mb-[6.8rem]">
+      <nav className="mb-[4.8rem] sm:mb-[6.8rem] lg:mb-0">
         <ul className="flex flex-col items-center gap-[2.4rem] text-center font-barlow text-[1.2rem] uppercase text-grey sm:flex-row">
           <li>
             <Link href="#">Home</Link>
@@ -34,7 +34,9 @@ export default function Footer() {
           </li>
         </ul>
       </nav>
-      <SocialsBar />
+      <div className="lg:ml-auto">
+        <SocialsBar />
+      </div>
     </footer>
   );
 }
