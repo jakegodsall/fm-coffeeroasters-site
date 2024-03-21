@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { AnimatePresence } from "framer-motion";
+
 import logo from "/public/assets/shared/desktop/logo.svg";
 import HamburgerButton from "./UI/HamburgerButton";
 import MobileMenu from "./modals/MobileMenu";
@@ -11,7 +13,6 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function handleMenuOpen() {
-    console.log("clicked");
     setMenuOpen((prevState) => !prevState);
   }
 
@@ -57,7 +58,9 @@ export default function Header() {
           </li>
         </ul>
       </div>
-      {menuOpen && <MobileMenu />}
+      <AnimatePresence>
+        {menuOpen && <MobileMenu handleMenuOpen={handleMenuOpen} />}
+      </AnimatePresence>
     </header>
   );
 }
