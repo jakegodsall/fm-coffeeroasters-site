@@ -17,7 +17,7 @@ export default function Header() {
   }
 
   return (
-    <header className="mx-auto flex w-full items-center justify-between px-[2.4rem] pb-[4rem] pt-[3.2rem] sm:max-w-[68rem] sm:px-0">
+    <header className="mx-auto flex w-full items-center justify-between px-[2.4rem] pb-[4rem] pt-[3.2rem] sm:w-[90%] sm:max-w-[68rem] sm:px-0 md:max-w-[128rem]">
       <Link href="/">
         <Image
           src={logo}
