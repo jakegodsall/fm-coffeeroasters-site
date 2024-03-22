@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import ProcessSection from "./components/ProcessSection/ProcessSection";
+import SubscribeForm from "./components/SubscribeForm/SubscribeForm";
 
 export default function SubscribePage() {
   return (
@@ -9,6 +10,9 @@ export default function SubscribePage() {
       </div>
       <div className="mb-[12rem]">
         <ProcessSection />
+      </div>
+      <div className="mb-[12rem] px-[2.4rem]">
+        <SubscribeForm />
       </div>
     </main>
   );
