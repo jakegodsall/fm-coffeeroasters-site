@@ -24,6 +24,12 @@ module.exports = {
           "url(/assets/about/tablet/image-hero-whitecup.jpg)",
         "about-hero-desktop":
           "url(/assets/about/desktop/image-hero-whitecup.jpg)",
+        "subscribe-hero-mobile":
+          "url(/assets/plan/mobile/image-hero-blackcup.jpg)",
+        "subscribe-hero-tablet":
+          "url(/assets/plan/tablet/image-hero-blackcup.jpg)",
+        "subscribe-hero-desktop":
+          "url(/assets/plan/desktop/image-hero-blackcup.jpg)",
       },
       fontFamily: {
         fraunces: "var(--font-fraunces)",

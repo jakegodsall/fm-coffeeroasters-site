@@ -21,7 +21,7 @@ export default function MobileMenu({ handleMenuOpen }) {
           </Link>
         </li>
         <li className="font-fraunces text-[2.4rem] text-secondary-green">
-          <Link onClick={handleMenuOpen} href="/suscribe">
+          <Link onClick={handleMenuOpen} href="/subscribe">
             Create Your Plan
           </Link>
         </li>
