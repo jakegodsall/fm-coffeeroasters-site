@@ -1,6 +1,6 @@
 "use client";
 
-const FORM_STRUCUTRE = [
+const FORM_QUESTIONS = [
   {
     id: 1,
     question: "How do you drink your coffee?",
