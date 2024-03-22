@@ -1,5 +1,7 @@
 "use client";
 
+import SubscribeFormFieldset from "./SubscribeFormFieldset";
+
 const FORM_QUESTIONS = [
   {
     id: 1,
@@ -101,17 +103,17 @@ const FORM_QUESTIONS = [
     options: [
       {
         id: 1,
-        option: "Every week",
+        title: "Every week",
         description: "$7.20 per shipment. Includes free first-class shipping.",
       },
       {
         id: 2,
-        option: "Every 2 weeks",
+        title: "Every 2 weeks",
         description: "$9.60 per shipment. Includes free priority shipping.",
       },
       {
         id: 3,
-        option: "Every month",
+        title: "Every month",
         description: "$12.00 per shipment. Includes free priority shipping.",
       },
     ],
@@ -125,7 +127,13 @@ export default function SubscribeForm() {
 
   return (
     <section>
-      <form onSubmit={handleSubmit}></form>
+      <form onSubmit={handleSubmit}>
+        <SubscribeFormFieldset
+          id={FORM_QUESTIONS[0].id}
+          question={FORM_QUESTIONS[0].question}
+          options={FORM_QUESTIONS[0].options}
+        />
+      </form>
     </section>
   );
 }
