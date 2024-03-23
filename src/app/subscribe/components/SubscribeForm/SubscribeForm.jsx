@@ -1,11 +1,14 @@
 "use client";
 
+import { useState } from "react";
+
 import SubscribeFormFieldset from "./SubscribeFormFieldset";
 
 const FORM_QUESTIONS = [
   {
     id: 1,
     question: "How do you drink your coffee?",
+    isOpen: false,
     options: [
       {
         id: 1,
@@ -29,6 +32,7 @@ const FORM_QUESTIONS = [
   {
     id: 2,
     question: "What type of coffee?",
+    isOpen: false,
     options: [
       {
         id: 1,
@@ -53,6 +57,7 @@ const FORM_QUESTIONS = [
   {
     id: 3,
     question: "How much would you like?",
+    isOpen: false,
     options: [
       {
         id: 1,
@@ -77,6 +82,7 @@ const FORM_QUESTIONS = [
   {
     id: 4,
     question: "Want us to grind them?",
+    isOpen: false,
     options: [
       {
         id: 1,
@@ -100,6 +106,7 @@ const FORM_QUESTIONS = [
   {
     id: 5,
     question: "How often should we deliver?",
+    isOpen: false,
     options: [
       {
         id: 1,
@@ -121,18 +128,38 @@ const FORM_QUESTIONS = [
 ];
 
 export default function SubscribeForm() {
+  const [formData, setFormData] = useState({});
+
   function handleSubmit(event) {
     event.preventDefault();
+  }
+
+  function handleOptionSelect(questionId, optionId) {
+    console.log(`Question ID: ${questionId}, Option ID: ${optionId}`);
+    setFormData((prevState) => ({
+      ...prevState,
+      [questionId]: optionId,
+    }));
+
+    console.log(formData);
   }
 
   return (
     <section>
       <form onSubmit={handleSubmit}>
-        <SubscribeFormFieldset
-          id={FORM_QUESTIONS[0].id}
-          question={FORM_QUESTIONS[0].question}
-          options={FORM_QUESTIONS[0].options}
-        />
+        <ul className="flex flex-col gap-[11rem]">
+          {FORM_QUESTIONS.map((formQuestion) => (
+            <li key={formQuestion.id}>
+              <SubscribeFormFieldset
+                questionId={formQuestion.id}
+                question={formQuestion.question}
+                isOpen={formQuestion.isOpen}
+                options={formQuestion.options}
+                handleOptionSelect={handleOptionSelect}
+              />
+            </li>
+          ))}
+        </ul>
       </form>
     </section>
   );

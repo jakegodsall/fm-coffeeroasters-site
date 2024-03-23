@@ -1,8 +1,9 @@
 export default function SubscribeRadioButton({
   questionId,
-  id,
+  optionId,
   title,
   description,
+  handleOptionSelect,
 }) {
   return (
     <div className="rounded-[0.8rem] bg-[#F4F1EB] p-[2.4rem]">
@@ -10,9 +11,10 @@ export default function SubscribeRadioButton({
         className="hidden"
         type="radio"
         name={`question-${questionId}`}
-        id={`answer-${id}`}
+        id={`question-${questionId}_option-${optionId}`}
+        onClick={() => handleOptionSelect(questionId, optionId)}
       />
-      <label htmlFor={`answer-${id}`}>
+      <label htmlFor={`question-${questionId}_option-${optionId}`}>
         <h3 className="mb-[1rem] font-fraunces text-[2.4rem] font-black text-secondary-green">
           {title}
         </h3>
