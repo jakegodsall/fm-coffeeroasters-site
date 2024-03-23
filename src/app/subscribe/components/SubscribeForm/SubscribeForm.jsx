@@ -160,7 +160,7 @@ export default function SubscribeForm() {
   return (
     <section>
       <form onSubmit={handleSubmit}>
-        <ul className="flex flex-col gap-[11rem]">
+        <ul className="flex flex-col">
           {formQuestions.map((formQuestion) => (
             <li key={formQuestion.id}>
               <SubscribeFormFieldset
