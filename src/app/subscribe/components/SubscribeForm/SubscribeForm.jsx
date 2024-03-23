@@ -8,7 +8,7 @@ const FORM_QUESTIONS = [
   {
     id: 1,
     question: "How do you drink your coffee?",
-    isOpen: false,
+    isOpen: true,
     options: [
       {
         id: 1,
@@ -32,7 +32,7 @@ const FORM_QUESTIONS = [
   {
     id: 2,
     question: "What type of coffee?",
-    isOpen: false,
+    isOpen: true,
     options: [
       {
         id: 1,
@@ -57,7 +57,7 @@ const FORM_QUESTIONS = [
   {
     id: 3,
     question: "How much would you like?",
-    isOpen: false,
+    isOpen: true,
     options: [
       {
         id: 1,
@@ -82,7 +82,7 @@ const FORM_QUESTIONS = [
   {
     id: 4,
     question: "Want us to grind them?",
-    isOpen: false,
+    isOpen: true,
     options: [
       {
         id: 1,
@@ -106,7 +106,7 @@ const FORM_QUESTIONS = [
   {
     id: 5,
     question: "How often should we deliver?",
-    isOpen: false,
+    isOpen: true,
     options: [
       {
         id: 1,
@@ -128,7 +128,20 @@ const FORM_QUESTIONS = [
 ];
 
 export default function SubscribeForm() {
+  const [formQuestions, setFormQuestions] = useState(FORM_QUESTIONS);
   const [formData, setFormData] = useState({});
+
+  function setIsOpen(questionId) {
+    setFormQuestions((prevState) => {
+      return prevState.map((question) => {
+        if (question.id === questionId) {
+          return { ...question, isOpen: !question.isOpen };
+        } else {
+          return question;
+        }
+      });
+    });
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -148,14 +161,15 @@ export default function SubscribeForm() {
     <section>
       <form onSubmit={handleSubmit}>
         <ul className="flex flex-col gap-[11rem]">
-          {FORM_QUESTIONS.map((formQuestion) => (
+          {formQuestions.map((formQuestion) => (
             <li key={formQuestion.id}>
               <SubscribeFormFieldset
                 questionId={formQuestion.id}
                 question={formQuestion.question}
-                isOpen={formQuestion.isOpen}
                 options={formQuestion.options}
                 handleOptionSelect={handleOptionSelect}
+                isOpen={formQuestion.isOpen}
+                setIsOpen={setIsOpen}
               />
             </li>
           ))}
