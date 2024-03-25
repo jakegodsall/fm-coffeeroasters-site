@@ -151,7 +151,7 @@ export default function SubscribeForm() {
     console.log(`Question ID: ${questionId}, Option ID: ${optionId}`);
     setFormData((prevState) => ({
       ...prevState,
-      [questionId]: optionId,
+      [`question-${questionId}`]: optionId,
     }));
 
     console.log(formData);
