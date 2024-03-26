@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 import SubscribeFormFieldset from "./SubscribeFormFieldset";
 import SubscribeSummary from "./SubscribeSummary";
@@ -190,7 +191,9 @@ export default function SubscribeForm() {
           ))}
         </ul>
       </form>
-      {answers.length === 5 && <SubscribeSummary answers={answers} />}
+      <AnimatePresence>
+        {answers.length === 5 && <SubscribeSummary answers={answers} />}
+      </AnimatePresence>
     </section>
   );
 }

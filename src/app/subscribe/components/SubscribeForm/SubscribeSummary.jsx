@@ -1,7 +1,13 @@
+import { motion } from "framer-motion";
+
 export default function SubscribeSummary({ answers }) {
-  console.log(answers);
   return (
-    <div className="flex flex-col bg-[#293039] p-[2.4rem]">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="flex flex-col bg-[#293039] p-[2.4rem]"
+    >
       <h5 className="mb-[0.8rem] font-barlow text-[1.6rem] uppercase text-off-white opacity-50">
         Order Summary
       </h5>
@@ -13,6 +19,6 @@ export default function SubscribeSummary({ answers }) {
         <span className="text-[#0E8784]">{answers[3]}</span>, sent to me{" "}
         <span className="text-[#0E8784]">{answers[4]}</span>.
       </p>
-    </div>
+    </motion.div>
   );
 }
