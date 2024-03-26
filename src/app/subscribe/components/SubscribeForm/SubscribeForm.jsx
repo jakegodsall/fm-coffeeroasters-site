@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 
 import SubscribeFormFieldset from "./SubscribeFormFieldset";
 import SubscribeSummary from "./SubscribeSummary";
+import SubmitButton from "@/app/components/UI/SubmitButton";
 
 const FORM_QUESTIONS = [
   {
@@ -175,7 +176,7 @@ export default function SubscribeForm() {
 
   return (
     <section>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="flex flex-col items-center">
         <ul className="flex flex-col">
           {formQuestions.map((formQuestion) => (
             <li key={formQuestion.id}>
@@ -190,10 +191,13 @@ export default function SubscribeForm() {
             </li>
           ))}
         </ul>
+        <AnimatePresence>
+          {answers.length === 5 && <SubscribeSummary answers={answers} />}
+        </AnimatePresence>
+        <SubmitButton isActive={answers.length === 5}>
+          Create my plan!
+        </SubmitButton>
       </form>
-      <AnimatePresence>
-        {answers.length === 5 && <SubscribeSummary answers={answers} />}
-      </AnimatePresence>
     </section>
   );
 }
