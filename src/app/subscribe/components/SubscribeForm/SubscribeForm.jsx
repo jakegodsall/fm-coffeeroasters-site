@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import SubscribeFormFieldset from "./SubscribeFormFieldset";
+import SubscribeSummary from "./SubscribeSummary";
 
 const FORM_QUESTIONS = [
   {
@@ -151,11 +152,25 @@ export default function SubscribeForm() {
     console.log(`Question ID: ${questionId}, Option ID: ${optionId}`);
     setFormData((prevState) => ({
       ...prevState,
-      [`question-${questionId}`]: optionId,
+      [questionId]: optionId,
     }));
 
     console.log(formData);
   }
+
+  const answers = Object.entries(formData).map((answer) => {
+    const [questionId, optionId] = answer;
+
+    const question = formQuestions.filter(
+      (question) => question.id === +questionId,
+    )[0];
+    const answerVerbose = question.options.filter(
+      (answer) => answer.id === +optionId,
+    )[0].title;
+
+    return answerVerbose;
+  });
+  console.log(answers);
 
   return (
     <section>
@@ -175,6 +190,7 @@ export default function SubscribeForm() {
           ))}
         </ul>
       </form>
+      {answers.length === 5 && <SubscribeSummary answers={answers} />}
     </section>
   );
 }
