@@ -10,14 +10,14 @@ import MobileMenu from "./modals/MobileMenu";
 import Link from "next/link";
 
 export default function Header() {
-const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   function handleMenuOpen() {
     setMenuOpen((prevState) => !prevState);
   }
 
   return (
-    <header className="mx-auto flex w-full items-center justify-between px-[2.4rem] pb-[4rem] pt-[3.2rem] sm:w-[90%] sm:max-w-[68rem] sm:px-0 md:max-w-[128rem]">
+    <header className="mx-auto flex w-full items-center justify-between px-[2.4rem] pb-[4rem] pt-[3.2rem] sm:w-[90%] sm:max-w-[70rem] sm:px-0 md:max-w-[128rem]">
       <Link href="/">
         <Image
           src={logo}
