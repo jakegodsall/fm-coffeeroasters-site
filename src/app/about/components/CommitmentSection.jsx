@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import commitmentImageMobile from "/public/assets/about/mobile/image-commitment.jpg";
-import commitmentIamgeTablet from "/public/assets/about/tablet/image-commitment.jpg";
+import commitmentImageTablet from "/public/assets/about/tablet/image-commitment.jpg";
 import commitmentImageDesktop from "/public/assets/about/desktop/image-commitment.jpg";
 
 export default function CommitmentSection() {
@@ -15,11 +15,11 @@ export default function CommitmentSection() {
         height="400"
       />
       <Image
-        src={commitmentIamgeTablet}
+        src={commitmentImageTablet}
         alt="A barista making an artisan coffee"
         className="mb-[4.8rem] hidden rounded-[0.8rem] sm:mb-0 sm:inline sm:flex-1"
-        width="327"
-        height="400"
+        width="281"
+        height="470"
       />
       <div className="text-center sm:flex-1 sm:text-left">
         <h2 className="mb-[3rem] font-fraunces text-[3.2rem] font-black text-secondary-green">

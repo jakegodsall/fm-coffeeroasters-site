@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import qualityImageMobile from "/public/assets/about/mobile/image-quality.jpg";
+import qualityImageTablet from "/public/assets/about/tablet/image-quality.jpg";
 import qualityImageDesktop from "/public/assets/about/desktop/image-quality.jpg";
 
 export default function QualitySection() {
@@ -11,9 +12,16 @@ export default function QualitySection() {
         alt="delicious coffee with a heart shape in the foam"
         width="280"
         height="156"
-        className="mb-[6.4rem] rounded-[0.8rem]"
+        className="mb-[6.4rem] rounded-[0.8rem] sm:hidden"
       />
-      <div className="relative px-[2.4rem] text-center before:absolute before:left-0 before:top-[-14rem] before:-z-10 before:h-[160%] before:w-full before:rounded-[0.8rem] before:bg-secondary-green before:content-['']">
+      <Image
+        src={qualityImageTablet}
+        alt="delicious coffee with a heart shape in the foam"
+        width="573"
+        height="320"
+        className="mb-[6.4rem] hidden rounded-[0.8rem] sm:inline"
+      />
+      <div className="relative px-[2.4rem] text-center before:absolute before:left-0 before:top-[-14rem] before:-z-10 before:h-[160%] before:w-full before:rounded-[0.8rem] before:bg-secondary-green before:content-[''] sm:before:h-[220%]">
         <h2 className="mb-[2.4rem] font-fraunces text-[2.8rem] font-black text-off-white">
           Uncompromising quality
         </h2>
