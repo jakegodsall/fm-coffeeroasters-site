@@ -5,7 +5,7 @@ import QualitySection from "./components/QualitySection";
 
 export default function AboutPage() {
   return (
-    <main className="px-[2.4rem]">
+    <main className="px-[2.4rem] sm:px-[4rem]">
       <div className="mb-[12rem] overflow-hidden rounded-[1rem]">
         <Hero />
       </div>
