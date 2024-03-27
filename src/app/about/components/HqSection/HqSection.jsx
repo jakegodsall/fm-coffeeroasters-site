@@ -72,13 +72,13 @@ const HQ_DATA = [
 
 export default function HqSection() {
   return (
-    <section className="flex flex-col items-center">
+    <section className="flex flex-col items-center sm:items-start">
       <h2 className="mb-[7.2rem]  font-fraunces text-[2.4rem] text-grey">
         Our headquarters
       </h2>
-      <ul className="flex flex-col items-center gap-[8rem]">
+      <ul className="flex w-full flex-col items-center gap-[8rem] sm:flex-row sm:items-start sm:justify-between sm:gap-[2rem]">
         {HQ_DATA.map((hq) => (
-          <li key={hq.id}>
+          <li key={hq.id} className="flex-1">
             <HqItem
               title={hq.title}
               address={hq.address}

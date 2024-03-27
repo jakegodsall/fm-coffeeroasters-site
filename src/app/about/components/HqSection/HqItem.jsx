@@ -1,6 +1,6 @@
 export default function HqItem({ title, address, phone, icon }) {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center sm:items-start">
       <div className="mb-[4.8rem]">{icon}</div>
       <h3 className="mb-[2.2rem] font-fraunces text-[2.8rem] text-secondary-green">
         {title}
