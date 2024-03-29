@@ -72,7 +72,7 @@ const HQ_DATA = [
 
 export default function HqSection() {
   return (
-    <section className="flex flex-col items-center sm:items-start">
+    <section className="flex flex-col items-center sm:items-start xl:px-[8rem]">
       <h2 className="mb-[7.2rem]  font-fraunces text-[2.4rem] text-grey">
         Our headquarters
       </h2>
