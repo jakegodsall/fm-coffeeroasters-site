@@ -9,7 +9,7 @@ export default function AboutPage() {
       <div className="mb-[12rem] w-full overflow-hidden rounded-[1rem] sm:max-w-[70rem] lg:max-w-[128rem]">
         <Hero />
       </div>
-      <div className="mb-[12rem] w-full sm:max-w-[70rem] lg:max-w-[128rem]">
+      <div className="mb-[12rem] w-full sm:mb-[30rem] sm:max-w-[70rem] lg:max-w-[128rem]">
         <CommitmentSection />
       </div>
       <div className="mb-[15rem] w-full sm:max-w-[70rem] lg:max-w-[128rem]">
