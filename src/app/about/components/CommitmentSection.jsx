@@ -6,7 +6,7 @@ import commitmentImageDesktop from "/public/assets/about/desktop/image-commitmen
 
 export default function CommitmentSection() {
   return (
-    <section className="flex flex-col items-center sm:flex-row sm:gap-[7rem]">
+    <section className="flex flex-col items-center sm:flex-row sm:gap-[7rem] lg:mx-[14rem]">
       <Image
         src={commitmentImageMobile}
         alt="A barista making an artisan coffee"
@@ -17,10 +17,18 @@ export default function CommitmentSection() {
       <Image
         src={commitmentImageTablet}
         alt="A barista making an artisan coffee"
-        className="mb-[4.8rem] hidden rounded-[0.8rem] sm:mb-0 sm:inline sm:flex-1"
+        className="mb-[4.8rem] hidden rounded-[0.8rem] sm:mb-0 sm:inline sm:flex-1 lg:hidden"
         width="281"
         height="470"
       />
+      <Image
+        src={commitmentImageDesktop}
+        alt="A barista making an artisan coffee"
+        className="mb-[4.8rem] hidden max-w-[44.5rem] rounded-[0.8rem] sm:mb-0 sm:flex-1 lg:inline"
+        width="445"
+        height="520"
+      />
+
       <div className="text-center sm:flex-1 sm:text-left">
         <h2 className="mb-[3rem] font-fraunces text-[3.2rem] font-black text-secondary-green">
           Our commitment
