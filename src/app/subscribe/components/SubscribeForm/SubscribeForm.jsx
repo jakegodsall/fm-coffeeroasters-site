@@ -187,8 +187,6 @@ export default function SubscribeForm() {
                 handleOptionSelect={handleOptionSelect}
                 isOpen={formQuestion.isOpen}
                 setIsOpen={setIsOpen}
-                
-                
                 formData={formData}
               />
             </li>
