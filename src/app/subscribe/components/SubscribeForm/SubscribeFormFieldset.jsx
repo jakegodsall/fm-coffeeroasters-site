@@ -8,7 +8,10 @@ export default function SubscribeFormFieldset({
   handleOptionSelect,
   isOpen,
   setIsOpen,
+  formData,
 }) {
+  // console.log("options");
+  // console.log(options);
   return (
     <fieldset
       className={clsx(
@@ -58,6 +61,7 @@ export default function SubscribeFormFieldset({
               title={option.title}
               description={option.description}
               handleOptionSelect={handleOptionSelect}
+              formData={formData}
             />
           </li>
         ))}
