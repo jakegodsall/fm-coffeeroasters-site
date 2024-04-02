@@ -6,6 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import SubscribeFormFieldset from "./SubscribeFormFieldset";
 import SubscribeSummary from "./SubscribeSummary";
 import SubmitButton from "@/app/components/UI/SubmitButton";
+import OrderSummary from "@/app/components/modals/OrderSummaryModal";
 
 const FORM_QUESTIONS = [
   {
@@ -133,6 +134,7 @@ const FORM_QUESTIONS = [
 export default function SubscribeForm() {
   const [formQuestions, setFormQuestions] = useState(FORM_QUESTIONS);
   const [formData, setFormData] = useState({});
+  const [orderModalOpen, setOrderModalOpen] = useState(false);
 
   function setIsOpen(questionId) {
     setFormQuestions((prevState) => {
@@ -148,6 +150,7 @@ export default function SubscribeForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    setOrderModalOpen(true);
   }
 
   function handleOptionSelect(questionId, optionId) {
@@ -158,6 +161,10 @@ export default function SubscribeForm() {
     }));
 
     console.log(formData);
+  }
+
+  function toggleOrderModal() {
+    setOrderModalOpen((prev) => !prev);
   }
 
   const answers = Object.entries(formData).map((answer) => {
@@ -172,7 +179,6 @@ export default function SubscribeForm() {
 
     return answerVerbose;
   });
-  console.log(answers);
 
   return (
     <section>
@@ -195,10 +201,16 @@ export default function SubscribeForm() {
         <AnimatePresence>
           {answers.length === 5 && <SubscribeSummary answers={answers} />}
         </AnimatePresence>
-        <SubmitButton isActive={answers.length === 5}>
+        <SubmitButton
+          isActive={answers.length === 5}
+          onClick={toggleOrderModal}
+        >
           Create my plan!
         </SubmitButton>
       </form>
+      {orderModalOpen && (
+        <OrderSummary answers={answers} closeModal={toggleOrderModal} />
+      )}
     </section>
   );
 }

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function MobileMenu({ handleMenuOpen }) {
+export default function MobileMenuModal({ handleMenuOpen }) {
   return (
     <motion.div
       initial={{ opacity: 0 }}

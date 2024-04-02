@@ -6,7 +6,7 @@ import { AnimatePresence } from "framer-motion";
 
 import logo from "/public/assets/shared/desktop/logo.svg";
 import HamburgerButton from "./UI/HamburgerButton";
-import MobileMenu from "./modals/MobileMenu";
+import MobileMenu from "./modals/MobileMenuModal";
 import Link from "next/link";
 
 export default function Header() {
