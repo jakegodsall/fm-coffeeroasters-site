@@ -170,7 +170,10 @@ export default function SubscribeForm() {
       setIsOpen(questionId);
       setIsOpen(questionId + 1);
     }
-    if (questionId === formQuestions.length) {
+    if (
+      questionId === formQuestions.length &&
+      !Object.keys(formData).includes(String(questionId))
+    ) {
       setIsOpen(questionId);
     }
   }
