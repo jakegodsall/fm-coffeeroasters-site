@@ -7,6 +7,7 @@ import SubscribeFormFieldset from "./SubscribeFormFieldset";
 import SubscribeSummary from "./SubscribeSummary";
 import SubmitButton from "@/app/components/UI/SubmitButton";
 import OrderSummary from "@/app/components/modals/OrderSummaryModal";
+import SubscribeContents from "./SubscribeContents";
 
 const FORM_QUESTIONS = [
   {
@@ -181,8 +182,14 @@ export default function SubscribeForm() {
   });
 
   return (
-    <section>
-      <form onSubmit={handleSubmit} className="flex flex-col items-center">
+    <section className="flex lg:justify-between">
+      <div className="hidden w-full max-w-[25.5rem] lg:block">
+        <SubscribeContents />
+      </div>
+      <form
+        onSubmit={handleSubmit}
+        className="flex max-w-[73rem] flex-col items-center"
+      >
         <ul className="flex flex-col sm:w-full">
           {formQuestions.map((formQuestion) => (
             <li key={formQuestion.id}>

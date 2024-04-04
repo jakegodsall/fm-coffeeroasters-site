@@ -17,7 +17,7 @@ export default function SubscribeRadioButton({
         "cursor-pointer rounded-[0.8rem] p-[2.4rem] sm:pb-[8rem]",
         isChecked
           ? "bg-[#0E8784] transition-all duration-700"
-          : "bg-[#F4F1EB] transition-all duration-500",
+          : "bg-[#F4F1EB] transition-all duration-500 hover:bg-[#FDD6BA]",
       )}
     >
       <input
