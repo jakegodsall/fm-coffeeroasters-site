@@ -14,7 +14,7 @@ export default function SubscribeRadioButton({
   return (
     <div
       className={clsx(
-        "cursor-pointer rounded-[0.8rem] p-[2.4rem]",
+        "cursor-pointer rounded-[0.8rem] p-[2.4rem] sm:pb-[8rem]",
         isChecked
           ? "bg-[#0E8784] transition-all duration-700"
           : "bg-[#F4F1EB] transition-all duration-500",
@@ -35,7 +35,7 @@ export default function SubscribeRadioButton({
           isChecked ? "text-off-white" : "text-secondary-green",
         )}
       >
-        <h3 className="mb-[1rem] font-fraunces text-[2.4rem] font-black">
+        <h3 className="mb-[1rem] font-fraunces text-[2.4rem] font-black sm:pb-[2.4rem]">
           {title}
         </h3>
         <p className="text-[1.4rem] leading-[2.6rem]">{description}</p>

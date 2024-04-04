@@ -183,7 +183,7 @@ export default function SubscribeForm() {
   return (
     <section>
       <form onSubmit={handleSubmit} className="flex flex-col items-center">
-        <ul className="flex flex-col">
+        <ul className="flex flex-col sm:w-full">
           {formQuestions.map((formQuestion) => (
             <li key={formQuestion.id}>
               <SubscribeFormFieldset
@@ -199,7 +199,14 @@ export default function SubscribeForm() {
           ))}
         </ul>
         <AnimatePresence>
-          {answers.length === 5 && <SubscribeSummary answers={answers} />}
+          {answers.length === 5 && (
+            <div className="mb-[5.6rem] rounded-[1rem] bg-[#293039] px-[2.4rem] py-[3.7rem] text-off-white">
+              <p className="mb-[0.8rem] text-[1.6rem] uppercase text-white opacity-50">
+                Order Summary
+              </p>
+              <SubscribeSummary answers={answers} />
+            </div>
+          )}
         </AnimatePresence>
         <SubmitButton
           isActive={answers.length === 5}

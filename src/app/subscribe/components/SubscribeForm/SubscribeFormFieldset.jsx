@@ -15,14 +15,17 @@ export default function SubscribeFormFieldset({
   return (
     <fieldset
       className={clsx(
-        "w-full",
+        "flex w-full flex-col",
         isOpen
           ? "mb-[11rem] transition-all duration-1000 ease-in-out"
           : "mb-0 transition-all duration-1000 ease-in-out",
       )}
     >
-      <div className="mb-[3.2rem] flex w-full items-center justify-between gap-[1rem] overflow-hidden">
-        <legend className="max-w-[24rem] font-fraunces text-[2.4rem] font-black leading-[2.8rem] text-[#83888f]">
+      <div
+        onClick={() => setIsOpen(questionId)}
+        className="mb-[3.2rem] flex w-full items-center justify-between gap-[1rem] overflow-hidden"
+      >
+        <legend className="max-w-[24rem] font-fraunces text-[2.4rem] font-black leading-[2.8rem] text-[#83888f] sm:max-w-none">
           {question}
         </legend>
         <div
@@ -35,7 +38,6 @@ export default function SubscribeFormFieldset({
         >
           <svg
             className="h-full w-full cursor-pointer fill-current text-[#0E8784]"
-            onClick={() => setIsOpen(questionId)}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -47,14 +49,14 @@ export default function SubscribeFormFieldset({
       </div>
       <ul
         className={clsx(
-          "flex flex-col gap-[1.6rem] overflow-hidden",
+          "flex flex-col gap-[1.6rem] overflow-hidden sm:flex-row",
           isOpen
-            ? "h-[47rem] transition-all duration-500 ease-in-out"
+            ? "h-[47rem] transition-all duration-500 ease-in-out sm:h-[26rem]"
             : "h-[0] transition-all duration-500 ease-in-out",
         )}
       >
         {options.map((option) => (
-          <li key={option.id}>
+          <li key={option.id} className="flex sm:flex-1">
             <SubscribeRadioButton
               questionId={questionId}
               optionId={option.id}
