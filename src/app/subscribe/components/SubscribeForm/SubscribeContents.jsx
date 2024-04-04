@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 const VALUES = [
   "Preferences",
   "Bean Type",
@@ -6,7 +8,7 @@ const VALUES = [
   "Deliveries",
 ];
 
-export default function SubscribeContents({ formQuestions }) {
+export default function SubscribeContents({ formQuestions, setIsOpen }) {
   console.log(formQuestions);
 
   return (
@@ -15,27 +17,25 @@ export default function SubscribeContents({ formQuestions }) {
         {formQuestions.map((formQuestion) => (
           <li
             key={formQuestion.id}
-            className="color-[#333d34b] mb-[2.4rem] flex w-full items-center gap-[2.85rem] border-b-[0.1rem] pb-[2.4rem] font-fraunces text-[2rem]"
+            className={clsx(
+              "mb-[2.4rem] flex w-full items-center border-b-[0.1rem] pb-[2.4rem] font-fraunces text-[2rem]",
+              formQuestion.isOpen ? "" : "",
+            )}
           >
-            <p>0{formQuestion.id}</p>
-            <p>{VALUES[formQuestion.id - 1]}</p>
+            <p
+              className={clsx(
+                "cursor-pointer ",
+                formQuestion.isOpen
+                  ? "text-[#333d34b]"
+                  : "text-[#ADB0B2] hover:text-[#848990]",
+              )}
+              onClick={() => setIsOpen(formQuestion.id)}
+            >
+              <span className="mr-[2.85rem]">0{formQuestion.id}</span>
+              {VALUES[formQuestion.id - 1]}
+            </p>
           </li>
         ))}
-        {/* <li className="color-[#333d34b] mb-[2.4rem] w-full border-b-[0.1rem] pb-[2.4rem] font-fraunces text-[2rem]">
-          01 Preferences
-        </li>
-        <li className="color-[#333d34b] mb-[2.4rem] w-full border-b-[0.1rem] pb-[2.4rem] font-fraunces text-[2rem]">
-          02 Bean Type
-        </li>
-        <li className="color-[#333d34b] mb-[2.4rem] w-full border-b-[0.1rem] pb-[2.4rem] font-fraunces text-[2rem]">
-          03 Quantity
-        </li>
-        <li className="color-[#333d34b] mb-[2.4rem] w-full border-b-[0.1rem] pb-[2.4rem] font-fraunces text-[2rem]">
-          04 Grind Option
-        </li>
-        <li className="color-[#333d34b] mb-[2.4rem] w-full border-b-[0.1rem] pb-[2.4rem] font-fraunces text-[2rem]">
-          05 Deliveries
-        </li> */}
       </ul>
     </div>
   );

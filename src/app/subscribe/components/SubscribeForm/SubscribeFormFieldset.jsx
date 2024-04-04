@@ -10,8 +10,6 @@ export default function SubscribeFormFieldset({
   setIsOpen,
   formData,
 }) {
-  // console.log("options");
-  // console.log(options);
   return (
     <fieldset
       className={clsx(
@@ -23,7 +21,7 @@ export default function SubscribeFormFieldset({
     >
       <div
         onClick={() => setIsOpen(questionId)}
-        className="mb-[3.2rem] flex w-full items-center justify-between gap-[1rem] overflow-hidden"
+        className="mb-[3.2rem] flex w-full cursor-pointer items-center justify-between gap-[1rem] overflow-hidden"
       >
         <legend className="max-w-[24rem] font-fraunces text-[2.4rem] font-black leading-[2.8rem] text-[#83888f] sm:max-w-none">
           {question}
@@ -37,7 +35,7 @@ export default function SubscribeFormFieldset({
           )}
         >
           <svg
-            className="h-full w-full cursor-pointer fill-current text-[#0E8784]"
+            className="h-full w-full fill-current text-[#0E8784]"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

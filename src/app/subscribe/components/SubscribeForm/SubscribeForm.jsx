@@ -37,7 +37,7 @@ const FORM_QUESTIONS = [
   {
     id: 2,
     question: "What type of coffee?",
-    isOpen: true,
+    isOpen: false,
     options: [
       {
         id: 1,
@@ -62,7 +62,7 @@ const FORM_QUESTIONS = [
   {
     id: 3,
     question: "How much would you like?",
-    isOpen: true,
+    isOpen: false,
     options: [
       {
         id: 1,
@@ -87,7 +87,7 @@ const FORM_QUESTIONS = [
   {
     id: 4,
     question: "Want us to grind them?",
-    isOpen: true,
+    isOpen: false,
     options: [
       {
         id: 1,
@@ -111,7 +111,7 @@ const FORM_QUESTIONS = [
   {
     id: 5,
     question: "How often should we deliver?",
-    isOpen: true,
+    isOpen: false,
     options: [
       {
         id: 1,
@@ -160,8 +160,6 @@ export default function SubscribeForm() {
       ...prevState,
       [questionId]: optionId,
     }));
-
-    console.log(formData);
   }
 
   function toggleOrderModal() {
@@ -184,7 +182,10 @@ export default function SubscribeForm() {
   return (
     <section className="flex lg:justify-between">
       <div className="hidden w-full max-w-[25.5rem] lg:block">
-        <SubscribeContents formQuestions={formQuestions} />
+        <SubscribeContents
+          formQuestions={formQuestions}
+          setIsOpen={setIsOpen}
+        />
       </div>
       <form
         onSubmit={handleSubmit}
