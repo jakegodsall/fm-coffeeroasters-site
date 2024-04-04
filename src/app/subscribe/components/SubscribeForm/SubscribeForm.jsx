@@ -184,7 +184,7 @@ export default function SubscribeForm() {
   return (
     <section className="flex lg:justify-between">
       <div className="hidden w-full max-w-[25.5rem] lg:block">
-        <SubscribeContents />
+        <SubscribeContents formQuestions={formQuestions} />
       </div>
       <form
         onSubmit={handleSubmit}
