@@ -1,3 +1,4 @@
+import HowItWorksGraphic from "@/app/(home)/components/HowItWorksSection/HowItWorksGraphic";
 import ProcessItem from "./ProcessItem";
 
 const PROCESS = [
@@ -23,8 +24,11 @@ const PROCESS = [
 
 export default function ProcessSection() {
   return (
-    <section className="w-full rounded-[0.8rem] bg-secondary-green px-[2.4rem] py-[8rem]">
-      <ul>
+    <section className="w-full rounded-[0.8rem] bg-secondary-green px-[2.4rem] py-[8rem] sm:px-[4rem]">
+      <div className="hidden sm:block">
+        <HowItWorksGraphic />
+      </div>
+      <ul className="flex flex-col items-center sm:flex-row sm:gap-[1rem]">
         {PROCESS.map((process) => (
           <li key={process.id}>
             <ProcessItem

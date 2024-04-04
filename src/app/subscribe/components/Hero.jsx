@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="bg-subscribe-hero-mobile rounded-[0.8rem] bg-cover bg-center bg-no-repeat px-[2.4rem] pb-[13.6rem] pt-[10rem] text-center">
+    <section className="rounded-[0.8rem] bg-subscribe-hero-mobile bg-cover bg-center bg-no-repeat px-[2.4rem] pb-[13.6rem] pt-[10rem] text-center sm:bg-subscribe-hero-tablet sm:px-[5.6rem] sm:text-left">
       <h1 className="mb-[2.2rem] max-w-[28rem] font-fraunces text-[4rem] font-black text-off-white">
         Create a plan
       </h1>
