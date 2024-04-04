@@ -37,7 +37,7 @@ const FORM_QUESTIONS = [
   {
     id: 2,
     question: "What type of coffee?",
-    isOpen: false,
+    isOpen: true,
     options: [
       {
         id: 1,
@@ -62,7 +62,7 @@ const FORM_QUESTIONS = [
   {
     id: 3,
     question: "How much would you like?",
-    isOpen: false,
+    isOpen: true,
     options: [
       {
         id: 1,
@@ -87,7 +87,7 @@ const FORM_QUESTIONS = [
   {
     id: 4,
     question: "Want us to grind them?",
-    isOpen: false,
+    isOpen: true,
     options: [
       {
         id: 1,
@@ -111,7 +111,7 @@ const FORM_QUESTIONS = [
   {
     id: 5,
     question: "How often should we deliver?",
-    isOpen: false,
+    isOpen: true,
     options: [
       {
         id: 1,
@@ -180,8 +180,8 @@ export default function SubscribeForm() {
   });
 
   return (
-    <section className="flex lg:justify-between">
-      <div className="hidden w-full max-w-[25.5rem] lg:block">
+    <section className="relative flex lg:justify-between">
+      <div className="hidden w-full max-w-[25.5rem] overflow-y-auto lg:block">
         <SubscribeContents
           formQuestions={formQuestions}
           setIsOpen={setIsOpen}

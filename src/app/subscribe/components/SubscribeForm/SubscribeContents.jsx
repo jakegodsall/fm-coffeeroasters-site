@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
 import clsx from "clsx";
 
 const VALUES = [
@@ -9,10 +13,44 @@ const VALUES = [
 ];
 
 export default function SubscribeContents({ formQuestions, setIsOpen }) {
-  console.log(formQuestions);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const contentsRef = useRef(null);
+
+  function updatePosition() {
+    // Get refs to the contents list and its container
+    const contents = contentsRef.current;
+    const container = contentsRef.current.parentElement;
+
+    // if contents list and container are defined
+    if (contents && container) {
+      const containerRect = container.getBoundingClientRect();
+
+      if (containerRect.top <= 120) {
+        setIsScrolling(true);
+      } else {
+        setIsScrolling(false);
+      }
+    }
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      updatePosition();
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    updatePosition();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div>
+    <div
+      className={clsx(isScrolling ? "fixed top-[12rem]" : "absolute top-0")}
+      ref={contentsRef}
+    >
+      {/* // <div className="fixed top-[8rem]"> */}
       <ul className="flex w-full max-w-[25.5rem] flex-col">
         {formQuestions.map((formQuestion) => (
           <li
