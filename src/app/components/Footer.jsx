@@ -24,13 +24,28 @@ export default function Footer() {
       <nav className="mb-[4.8rem] sm:mb-[6.8rem] lg:mb-0">
         <ul className="flex flex-col items-center gap-[2.4rem] text-center font-barlow text-[1.2rem] uppercase text-grey sm:flex-row">
           <li>
-            <Link href="#">Home</Link>
+            <Link
+              className="transition-all duration-300 hover:text-off-white hover:opacity-80"
+              href="#"
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="#">About us</Link>
+            <Link
+              className="transition-all duration-300 hover:text-off-white hover:opacity-80"
+              href="#"
+            >
+              About us
+            </Link>
           </li>
           <li>
-            <Link href="#">Create your plan</Link>
+            <Link
+              className="transition-all duration-300 hover:text-off-white hover:opacity-80"
+              href="#"
+            >
+              Create your plan
+            </Link>
           </li>
         </ul>
       </nav>
