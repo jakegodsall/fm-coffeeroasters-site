@@ -24,13 +24,13 @@ const PROCESS = [
 
 export default function ProcessSection() {
   return (
-    <section className="w-full rounded-[0.8rem] bg-secondary-green px-[2.4rem] py-[8rem] sm:px-[4rem]">
+    <section className="w-full rounded-[0.8rem] bg-secondary-green px-[2.4rem] py-[8rem] sm:px-[4rem] lg:px-[8rem]">
       <div className="hidden sm:block">
         <HowItWorksGraphic />
       </div>
-      <ul className="flex flex-col items-center sm:flex-row sm:gap-[1rem]">
+      <ul className="flex w-full flex-col items-center sm:flex-row sm:items-start sm:gap-[1rem]">
         {PROCESS.map((process) => (
-          <li key={process.id}>
+          <li key={process.id} className="flex-1">
             <ProcessItem
               id={process.id}
               title={process.title}

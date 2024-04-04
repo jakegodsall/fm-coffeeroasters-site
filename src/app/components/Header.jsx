@@ -24,7 +24,7 @@ export default function Header() {
           alt="logo"
           width="163"
           height="18"
-          className="h-[1.8rem] w-[16.3rem]"
+          className="h-[1.8rem] w-[16.3rem] sm:h-[2.6rem] sm:w-[23.6rem]"
         />
       </Link>
       <div className="relative z-20 sm:hidden">
