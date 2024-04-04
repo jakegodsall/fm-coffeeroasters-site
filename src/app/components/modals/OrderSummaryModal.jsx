@@ -17,7 +17,7 @@ export default function OrderSummaryModal({ answers, closeModal }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0, transition: { delay: 0.2, duration: 0.5 } }}
-        className="fixed left-0 top-0 z-30 mx-[2.4rem] my-[3.5rem] flex flex-col items-center overflow-hidden rounded-[0.8rem] bg-off-white "
+        className="fixed left-[50%] top-[50%] z-30 my-[3.5rem] flex w-4/5 translate-x-[-50%] translate-y-[-50%] flex-col items-center overflow-hidden rounded-[0.8rem] bg-off-white sm:max-w-[54rem]"
       >
         <div>
           <h1 className="bg-[#333D4B] p-[2.4rem] font-fraunces text-[2.8rem] text-white">

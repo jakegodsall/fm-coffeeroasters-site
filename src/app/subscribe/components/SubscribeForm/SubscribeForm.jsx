@@ -135,7 +135,7 @@ const FORM_QUESTIONS = [
 export default function SubscribeForm() {
   const [formQuestions, setFormQuestions] = useState(FORM_QUESTIONS);
   const [formData, setFormData] = useState({});
-  const [orderModalOpen, setOrderModalOpen] = useState(false);
+  const [orderModalOpen, setOrderModalOpen] = useState(true);
 
   function setIsOpen(questionId) {
     setFormQuestions((prevState) => {
@@ -226,12 +226,14 @@ export default function SubscribeForm() {
             </div>
           )}
         </AnimatePresence>
-        <SubmitButton
-          isActive={answers.length === 5}
-          onClick={toggleOrderModal}
-        >
-          Create my plan!
-        </SubmitButton>
+        <div className="lg:ml-auto">
+          <SubmitButton
+            isActive={answers.length === 5}
+            onClick={toggleOrderModal}
+          >
+            Create my plan!
+          </SubmitButton>
+        </div>
       </form>
       {orderModalOpen && (
         <OrderSummary answers={answers} closeModal={toggleOrderModal} />
