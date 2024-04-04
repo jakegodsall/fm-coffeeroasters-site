@@ -25,6 +25,7 @@ export default function SubscribeContents({ formQuestions, setIsOpen }) {
     if (contents && container) {
       const containerRect = container.getBoundingClientRect();
 
+      // if the coordinate of the top of the container is less than 120px from the top of the viewport
       if (containerRect.top <= 120) {
         setIsScrolling(true);
       } else {

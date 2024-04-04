@@ -37,7 +37,7 @@ const FORM_QUESTIONS = [
   {
     id: 2,
     question: "What type of coffee?",
-    isOpen: true,
+    isOpen: false,
     options: [
       {
         id: 1,
@@ -62,7 +62,7 @@ const FORM_QUESTIONS = [
   {
     id: 3,
     question: "How much would you like?",
-    isOpen: true,
+    isOpen: false,
     options: [
       {
         id: 1,
@@ -87,7 +87,7 @@ const FORM_QUESTIONS = [
   {
     id: 4,
     question: "Want us to grind them?",
-    isOpen: true,
+    isOpen: false,
     options: [
       {
         id: 1,
@@ -111,7 +111,7 @@ const FORM_QUESTIONS = [
   {
     id: 5,
     question: "How often should we deliver?",
-    isOpen: true,
+    isOpen: false,
     options: [
       {
         id: 1,
@@ -160,6 +160,16 @@ export default function SubscribeForm() {
       ...prevState,
       [questionId]: optionId,
     }));
+
+    console.log(Object.keys(formData));
+    if (
+      questionId !== formQuestions.length &&
+      !formQuestions[questionId].isOpen &&
+      !Object.keys(formData).includes(String(questionId))
+    ) {
+      setIsOpen(questionId);
+      setIsOpen(questionId + 1);
+    }
   }
 
   function toggleOrderModal() {
