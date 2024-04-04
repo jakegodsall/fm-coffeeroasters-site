@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 export default function SubscribeSummary({ answers }) {
   return (
     <p className="font-fraunces text-[2.4rem] leading-[4rem]">

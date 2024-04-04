@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import SubscribeFormFieldset from "./SubscribeFormFieldset";
 import SubscribeSummary from "./SubscribeSummary";
@@ -170,6 +170,9 @@ export default function SubscribeForm() {
       setIsOpen(questionId);
       setIsOpen(questionId + 1);
     }
+    if (questionId === formQuestions.length) {
+      setIsOpen(questionId);
+    }
   }
 
   function toggleOrderModal() {
@@ -218,22 +221,30 @@ export default function SubscribeForm() {
         </ul>
         <AnimatePresence>
           {answers.length === 5 && (
-            <div className="mb-[5.6rem] rounded-[1rem] bg-[#293039] px-[2.4rem] py-[3.7rem] text-off-white">
-              <p className="mb-[0.8rem] text-[1.6rem] uppercase text-white opacity-50">
-                Order Summary
-              </p>
-              <SubscribeSummary answers={answers} />
-            </div>
+            <motion.div
+              className="flex flex-col "
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ delay: 0.5 }}
+            >
+              <div className="mb-[5.6rem] rounded-[1rem] bg-[#293039] px-[2.4rem] py-[3.7rem] text-off-white">
+                <p className="mb-[0.8rem] text-[1.6rem] uppercase text-white opacity-50">
+                  Order Summary
+                </p>
+                <SubscribeSummary answers={answers} />
+              </div>
+              <div className="lg:ml-auto">
+                <SubmitButton
+                  isActive={answers.length === 5}
+                  onClick={toggleOrderModal}
+                >
+                  Create my plan!
+                </SubmitButton>
+              </div>
+            </motion.div>
           )}
         </AnimatePresence>
-        <div className="lg:ml-auto">
-          <SubmitButton
-            isActive={answers.length === 5}
-            onClick={toggleOrderModal}
-          >
-            Create my plan!
-          </SubmitButton>
-        </div>
       </form>
       {orderModalOpen && (
         <OrderSummary answers={answers} closeModal={toggleOrderModal} />
