@@ -12,7 +12,8 @@ export default function SubscribeRadioButton({
   const isChecked = formData && formData[questionId] === optionId;
 
   return (
-    <div
+    <label
+      htmlFor={`question-${questionId}_option-${optionId}`}
       className={clsx(
         "cursor-pointer rounded-[0.8rem] p-[2.4rem] sm:pb-[8rem]",
         isChecked
@@ -28,8 +29,7 @@ export default function SubscribeRadioButton({
         onChange={() => handleOptionSelect(questionId, optionId)}
         checked={isChecked}
       />
-      <label
-        htmlFor={`question-${questionId}_option-${optionId}`}
+      <div
         className={clsx(
           "cursor-pointer",
           isChecked ? "text-off-white" : "text-secondary-green",
@@ -39,7 +39,7 @@ export default function SubscribeRadioButton({
           {title}
         </h3>
         <p className="text-[1.4rem] leading-[2.6rem]">{description}</p>
-      </label>
-    </div>
+      </div>
+    </label>
   );
 }
