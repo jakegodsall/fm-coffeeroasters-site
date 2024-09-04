@@ -44,7 +44,7 @@ export default function HowItWorksSection() {
         ))}
       </ul>
       <div className="text-off-white">
-        <Button>Create your plan</Button>
+        <Button href="subscribe">Create your plan</Button>
       </div>
     </section>
   );
