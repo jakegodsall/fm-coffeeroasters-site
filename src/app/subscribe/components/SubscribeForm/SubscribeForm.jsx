@@ -6,8 +6,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import SubscribeFormFieldset from "./SubscribeFormFieldset";
 import SubscribeSummary from "./SubscribeSummary";
 import SubmitButton from "@/app/components/UI/SubmitButton";
-import OrderSummary from "@/app/components/modals/OrderSummaryModal";
+import OrderSummaryModal from "@/app/components/modals/OrderSummaryModal";
 import SubscribeContents from "./SubscribeContents";
+import ThankYouModal from "@/app/components/modals/ThankYouModal";
 
 const FORM_QUESTIONS = [
   {
@@ -135,7 +136,8 @@ const FORM_QUESTIONS = [
 export default function SubscribeForm() {
   const [formQuestions, setFormQuestions] = useState(FORM_QUESTIONS);
   const [formData, setFormData] = useState({});
-  const [orderModalOpen, setOrderModalOpen] = useState(false);
+  const [orderModalOpen, setOrderModalOpen] = useState(true);
+  const [thankYouModalOpen, setThankYouModalOpen] = useState(false);
 
   function setIsOpen(questionId) {
     setFormQuestions((prevState) => {
@@ -180,6 +182,11 @@ export default function SubscribeForm() {
 
   function toggleOrderModal() {
     setOrderModalOpen((prev) => !prev);
+  }
+
+  function toggleThankYouModal() {
+    setOrderModalOpen(false);
+    setThankYouModalOpen((prev) => !prev);
   }
 
   const answers = Object.entries(formData).map((answer) => {
@@ -249,9 +256,20 @@ export default function SubscribeForm() {
           )}
         </AnimatePresence>
       </form>
-      {orderModalOpen && (
-        <OrderSummary answers={answers} closeModal={toggleOrderModal} />
-      )}
+      <AnimatePresence>
+        {orderModalOpen && (
+          <OrderSummaryModal
+            answers={answers}
+            closeModal={toggleOrderModal}
+            openThankYouModal={toggleThankYouModal}
+          />
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {thankYouModalOpen && (
+          <ThankYouModal closeModal={toggleThankYouModal} />
+        )}
+      </AnimatePresence>
     </section>
   );
 }
