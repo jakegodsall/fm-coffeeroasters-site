@@ -36,21 +36,12 @@ export default function OrderSummaryModal({
             </p>
           </div>
         </div>
-        <a
+        <p
           className="mb-[2.4rem] rounded-[0.6rem] bg-[#0e8784] px-[3.2rem] py-[1.6rem] font-fraunces text-[1.8rem] text-off-white transition-all duration-300 hover:bg-[#66d2cf] sm:hidden"
-          href=""
+          onClick={openThankYouModal}
         >
           Checkout - $14.00 / mo
-        </a>
-        <div className="mb-[5.6rem] hidden items-center gap-[2.5rem] sm:flex">
-          <p className="font-fraunces text-[3.2rem]">$14.00 / m</p>
-          <p
-            onClick={openThankYouModal}
-            className="cursor-pointer rounded-[0.6rem] bg-[#0e8784] px-[6.4rem] py-[1.6rem] font-fraunces text-[1.8rem] text-off-white transition-all duration-300 hover:bg-[#66d2cf]"
-          >
-            Checkout
-          </p>
-        </div>
+        </p>
       </motion.div>
     </>
   );
