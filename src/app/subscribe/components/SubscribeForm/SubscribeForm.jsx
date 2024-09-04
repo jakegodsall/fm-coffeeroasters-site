@@ -136,7 +136,7 @@ const FORM_QUESTIONS = [
 export default function SubscribeForm() {
   const [formQuestions, setFormQuestions] = useState(FORM_QUESTIONS);
   const [formData, setFormData] = useState({});
-  const [orderModalOpen, setOrderModalOpen] = useState(true);
+  const [orderModalOpen, setOrderModalOpen] = useState(false);
   const [thankYouModalOpen, setThankYouModalOpen] = useState(false);
 
   function setIsOpen(questionId) {

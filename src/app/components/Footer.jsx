@@ -26,7 +26,7 @@ export default function Footer() {
           <li>
             <Link
               className="transition-all duration-300 hover:text-off-white hover:opacity-80"
-              href="#"
+              href="/"
             >
               Home
             </Link>
@@ -34,7 +34,7 @@ export default function Footer() {
           <li>
             <Link
               className="transition-all duration-300 hover:text-off-white hover:opacity-80"
-              href="#"
+              href="about"
             >
               About us
             </Link>
@@ -42,7 +42,7 @@ export default function Footer() {
           <li>
             <Link
               className="transition-all duration-300 hover:text-off-white hover:opacity-80"
-              href="#"
+              href="subscribe"
             >
               Create your plan
             </Link>
